@@ -7,7 +7,7 @@ git clone https://github.com/bangabudesign/ukk-invitation.git .
 ```
 Lalu ubah remote url repository sesuai dengan repository github yg sudah Anda buat
 ```
-git remote set-url origin https://github.com/bangabudesign/ukk-invitation.git
+git remote set-url origin masukkan_repository_url
 ```
 
 ## 1. MENGINSTALL GIT
