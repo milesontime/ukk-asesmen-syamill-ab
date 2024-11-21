@@ -1,5 +1,5 @@
 ## 1. MENGINSTALL GIT
-[https://git-scm.com/downloads/win](https://git-scm.com/downloads/win)\
+[https://git-scm.com/downloads/win](https://git-scm.com/downloads/win)
 
 ## 2. MEMBUAT AKUN GITHUB
 Buat akun github
