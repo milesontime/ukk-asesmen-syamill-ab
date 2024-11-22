@@ -19,6 +19,13 @@ Lalu ubah remote url repository sesuai dengan repository github yg sudah Anda bu
 ```
 git remote set-url origin masukkan_repository_url
 ```
+Melakukan konfigurasi
+```
+git config --global user.name "Nama Anda"
+```
+```
+git config --global user.email "emailanda@email.com"
+```
 
 ## 3. UPLOAD KE GITHUB
 Tutorial untuk upload project ke github
@@ -27,6 +34,9 @@ git add .
 ```
 ```
 git commit -m "catatan commit anda"
+```
+```
+git push --set-upstream origin master
 ```
 ```
 git push
