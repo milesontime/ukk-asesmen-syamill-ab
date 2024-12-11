@@ -11,7 +11,7 @@ Jika sudah punya akun silakan Sign In / Log In:
 ## 3. DOWNLOAD/CLONE
 Clone repository dengan membuka folder kosong menggunakan VS Code lalu buka terminal pada VS Code dan ketikkan perintah berikut:
 ```
-git clone https://github.com/bangabudesign/ukk-invitation.git .
+git clone https://github.com/bangabudesign/party-invitation.git .
 ```
 Lalu ubah remote url repository sesuai dengan repository github yg sudah Anda buat
 ```
