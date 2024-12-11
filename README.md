@@ -9,9 +9,7 @@ Jika sudah punya akun silakan Sign In / Log In:
 [https://github.com/login](https://github.com/login)
 
 ## 3. DOWNLOAD/CLONE
-Silakan download semua assetsnya dengan menekan tombol [<> Code] lalu [Download Zip]
-
-Atau Anda bisa gunakan cara kedua, dengan membuka folder kosong menggunakan VS Code lalu buka terminal pada VS Code dan ketikkan perintah berikut:
+Clone repository dengan membuka folder kosong menggunakan VS Code lalu buka terminal pada VS Code dan ketikkan perintah berikut:
 ```
 git clone https://github.com/bangabudesign/ukk-invitation.git .
 ```
