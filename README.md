@@ -1,14 +1,16 @@
-## 1. MENGINSTALL GIT
+## I. PERSIAPAN
+### 1. Menginstall GIT
 [https://git-scm.com/downloads/win](https://git-scm.com/downloads/win)
 
-## 2. MEMBUAT AKUN GITHUB
+### 2. Membuat Akun Github
 Buat akun github
 [https://github.com/signup](https://github.com/signup)
 
 Jika sudah punya akun silakan Sign In / Log In:
 [https://github.com/login](https://github.com/login)
 
-## 3. DOWNLOAD/CLONE
+## II. TUGAS
+### 1. Clone Repository
 Clone repository dengan membuka folder kosong menggunakan VS Code lalu buka terminal pada VS Code dan ketikkan perintah berikut:
 ```
 git clone https://github.com/bangabudesign/party-invitation.git .
@@ -24,9 +26,16 @@ git config --global user.name "Nama Anda"
 ```
 git config --global user.email "emailanda@email.com"
 ```
-
-## 3. UPLOAD KE GITHUB
-Tutorial untuk upload project ke github
+### 1. Memperbaiki codingan yang error
+Semua assets sudah tersedia pada project ini
+### 2. Menambah fitur music saat undangan dibuka
+Link Music
+```
+https://assets.satumomen.com/musics/akon-be-with-you.mp3
+```
+### 3. Menambah fitur countdown
+### 4. Mengupload ke github
+upload project ke github
 ```
 git add .
 ```
@@ -39,15 +48,14 @@ git push --set-upstream origin master
 ```
 git push
 ```
-
-## 4. MEMBUAT AKUN VERCEL
-Vercel adalah platform cloud yang menyediakan alat, alur kerja, dan infrastruktur untuk membangun dan menyebarkan aplikasi web. Vercel menawarkan berbagai fitur, seperti: CDN global, Domain kustom, HTTPS otomatis, Fitur rendering untuk membuat halaman dinamis, API Vercel untuk membuat halaman dinamis yang disesuaikan.
-
+### 5. Mendeploy ke vercel
 Buat akun Vercel melalui situs resminya\
 [www.vercel.com](https://vercel.com)
 
-## 5. DEPLOY KE VERCEL
 1. Kirim kode Anda ke repositori git Anda (GitHub, GitLab, BitBucket).
 2. Impor proyek Anda ke Vercel.
 3. Vercel akan mendeteksi project Anda dan akan mengaktifkan pengaturan yang benar untuk penerapan Anda.
 4. Aplikasi Anda sudah di-deploy! 
+## III. KUMPULKAN
+Kumpulkan tugas melalui form di bawah ini:\
+[Kumpulkan Tugas](https://forms.gle/1eTtqMfrjNqy4hAJ7)
