@@ -43,6 +43,7 @@
         justify-content: center;
         z-index: 9999;
         transition: all 0.3s ease;
+        animation: fadeInOverlay 0.3s ease forwards;
     }
     .zoom-overlay img {
         max-width: 90%;
@@ -56,6 +57,10 @@
         cursor: zoom-in;
         transition: transform 0.3s ease;
     }
+    .zoomable:hover {
+        transform: scale(1.11);
+        filter: brightness(1.04);
+    }
     @keyframes zoomInSmooth {
     0% {
         transform: scale(0.8);
@@ -66,7 +71,15 @@
         opacity: 1;
     }
 }
-    </style>
+    @keyframes fadeInOverlay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
 </head>
 
 <body class="bg-white">
@@ -252,11 +265,17 @@
             document.body.appendChild(overlay);
 
             overlay.addEventListener("click", function () {
-                document.body.removeChild(overlay);
-            });
-        });
-    });
+                zoomImg.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+                zoomImg.style.transform = "scale(0.8)";
+                zoomImg.style.opacity = "0";
+                overlay.style.transition = "opacity 0.3s ease";
+                overlay.style.opacity = "0";
 
-    ;
+                setTimeout(() => {
+                    document.body.removeChild(overlay);
+                }, 300);
+    });
+        });
+    });;
 </script>
 </html>
