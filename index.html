@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party Invitation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Inika:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arizonia&family=Inika:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: "Poppins", sans-serif;
         }
+
         .font-accent {
             font-family: "Inika", serif;
         }
+
         .font-latin {
             font-family: "Arizonia", cursive;
         }
+        img {
+            mix-blend-mode: luminosity;
+        }
+        .zoom-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: all 0.3s ease;
+    }
+    .zoom-overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 1rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        cursor: zoom-out;
+        animation: zoomInSmooth 1s ease forwards;
+    }
+    .zoomable {
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+    @keyframes zoomInSmooth {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
     </style>
 </head>
+
 <body class="bg-white">
     <!-- cover undangan -->
     <section
         class="overflow-hidden relative text-center mx-auto h-screen w-full max-w-lg flex items-center justify-center flex-col bg-cover bg-center"
-        style="background-color: #FDF4EF; background-image: url(/gallery-6.jpg);"
-    >
-        <div class="bg-slate-950/50 text-white h-full w-full text-center mx-auto h-screen w-full flex items-center justify-center flex-col" style="position: relative; z-index: 99;">
-            <div class="mb-5" data-aos="zoom-in" data-aos-duration="3000">You Are Invited to <br>17<sup>th</sup>  Birthday Party of</div>
+        style="background-color: #FDF4EF; background-image: url(image/gallery-6.jpg); background-blend-mode: luminosity;">
+        <div class="bg-slate-950/50 text-white h-full w-full text-center mx-auto h-screen w-full flex items-center justify-center flex-col"
+            style="position: relative; z-index: 99;">
+            <div class="mb-5" data-aos="zoom-in" data-aos-duration="3000">You Are Invited to <br>17<sup>th</sup>
+                Birthday Party of</div>
             <div class="mb-16 text-6xl font-medium font-accent" data-aos="zoom-in" data-aos-duration="3000">AYA</div>
             <div data-aos="zoom-in" data-aos-duration="3000">
                 <div class="mb-2">Kepada Yth <br>Bapak/Ibu/Saudara/i</div>
                 <div class="mb-6 font-bold">Nama Tamu</div>
-                <a
-                    id="btnOpen"
-                    href="#invContent"
-                    class="bg-rose-500 text-white py-3 px-6 rounded-xl hover:bg-rose-700"
-                >Open Invitation</a>
+                <a id="btnOpen" href="#invContent"
+                    class="bg-rose-500 text-white py-3 px-6 rounded-xl hover:bg-rose-700">Open Invitation</a>
             </div>
         </div>
     </section>
     <!-- isi undangan -->
-    <div
-        id="invContent"
-        class="hidden overflow-hidden bg-indigo-50 relative text-center mx-auto w-full max-w-lg flex items-center justify-center flex-col"
-    >
-    
+    <div id="invContent"
+        class="hidden overflow-hidden bg-indigo-50 relative text-center mx-auto w-full max-w-lg flex items-center justify-center flex-col">
+
         <section class="px-6 py-12 w-full relative">
             <p class="mx-auto max-w-80 mb-8">You are cordially invited to celebrate the sweet seventeen party of</p>
-            <div class="mx-auto mb-4 w-full max-w-[26rem] h-[38rem] rounded-2xl overflow-hidden relative" data-aos="zoom-in" data-aos-duration="3000">
-                <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
-                <div class="p-6 absolute left-0 right-0 bottom-0 text-left">
+            <div class="mx-auto mb-4 w-full max-w-[26rem] h-[38rem] rounded-2xl overflow-hidden relative"
+                data-aos="zoom-in" data-aos-duration="3000">
+                <img class="size-full object-cover" src="image/gallery-1.jpg" alt="" height="150" width="150">
+                <div style="backdrop-filter: blur(8px);" class="p-6 absolute left-0 right-0 bottom-0 text-left">
                     <h2 class="text-2xl font-bold">AYA HUMAIRA DESTIANA</h2>
                     <p>Seventeen and grateful for every opportunity that comes my way.</p>
                 </div>
@@ -63,28 +106,29 @@
         <section class="px-6 py-12 w-full relative">
             <div class="mx-auto w-full max-w-[26rem]">
                 <div class="grid grid-cols-3 gap-2 mb-2">
-                    <div class="aspect-square overflow-hidden">
-                        <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                    <div class="aspect-square overflow-hidden rounded-tl-tg">
+                        <img class="size-full object-cover" src="image/gallery-2.jpg" alt="" height="150" width="150">
                     </div>
                     <div class="aspect-square overflow-hidden">
-                        <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                        <img class="size-full object-cover" src="image/gallery-3.jpg" alt="" height="150" width="150">
                     </div>
-                    <div class="aspect-square overflow-hidden">
-                        <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                    <div class="aspect-square overflow-hidden rounded-tr-tg">
+                        <img class="size-full object-cover" src="image/gallery-4.jpg" alt="" height="150" width="150">
                     </div>
                 </div>
-                <div class="aspect-square overflow-hidden">
-                    <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                <div class="aspect-square overflow-hidden rounded-b-tg">
+                    <img class="size-full object-cover" src="image/gallery-5.jpg" alt="" height="150" width="150">
                 </div>
             </div>
         </section>
 
         <section class="w-full px-6 py-12 w-full relative">
-            <div class="mx-auto bg-white w-full max-w-[26rem] px-4 pt-24 pb-24 rounded-2xl" data-aos="zoom-in" data-aos-duration="3000">
+            <div class="mx-auto bg-white w-full max-w-[26rem] px-4 pt-24 pb-24 rounded-2xl" data-aos="zoom-in"
+                data-aos-duration="3000">
                 <h2 class="font-latin text-4xl mb-4">Birthday Party</h2>
                 <p class="text-xl font-bold">Selasa, 8 Oktober 2024</p>
                 <p class="text-xl font-bold mb-8">Pukul 08.00 - 10.00 WITA</p>
-                
+
                 <div id="hitungMundur" class="grid grid-cols-4 gap-2 mb-8" data-aos="fade-up" data-aos-duration="3000">
                     <div class="bg-rose-500 text-white p-3 rounded-md">
                         <div id="hari" class="text-2xl">00</div>
@@ -103,10 +147,13 @@
                         <div class="text-sm">Detik</div>
                     </div>
                 </div>
-                
+
                 <h2 class="font-latin text-4xl mb-4">Alamat</h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolorum fuga quae hic nobis eveniet ipsum.</p>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block mb-8 bg-rose-500 text-white py-3 px-6 rounded-xl hover:bg-rose-700">Buka Google Maps</a>
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolorum fuga quae
+                    hic nobis eveniet ipsum.</p>
+                <a href="https://maps.app.goo.gl/XTTYSzcP92LGuACr7" target="_blank" rel="noopener noreferrer"
+                    class="inline-block mb-8 bg-rose-500 text-white py-3 px-6 rounded-xl hover:bg-rose-700">Buka Google
+                    Maps</a>
 
                 <h2 class="font-latin text-4xl mb-4">Dresscode</h2>
                 <p class="text-xl font-bold">Purple</p>
@@ -117,31 +164,99 @@
             <div class="mx-auto w-full max-w-[26rem]">
                 <h2 class="font-latin text-4xl mb-4">Our Memories</h2>
                 <div class="grid grid-cols-2 gap-2 mb-2">
-                    <div class="aspect-square overflow-hidden">
-                        <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                    <div class="aspect-square overflow-hidden rounded-tl-tg">
+                        <img class="size-full object-cover" src="image/gallery-6.jpg" alt="" height="150" width="150">
                     </div>
-                    <div class="aspect-square overflow-hidden">
-                        <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                    <div class="aspect-square overflow-hidden rounded-tr-tg">
+                        <img class="size-full object-cover" src="image/gallery-7.jpg" alt="" height="150" width="150">
                     </div>
-                    <div class="aspect-square overflow-hidden">
-                        <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                    <div class="aspect-square overflow-hidden rounded-bl-tg">
+                        <img class="size-full object-cover" src="image/gallery-8.jpg" alt="" height="150" width="150">
                     </div>
-                    <div class="aspect-square overflow-hidden">
-                        <img class="size-full object-cover" src="/no-image.webp" alt="" height="150" width="150">
+                    <div class="aspect-square overflow-hidden rounded-br-tg">
+                        <img class="size-full object-cover" src="image/gallery-9.jpg" alt="" height="150" width="150">
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="px-6 py-12 w-full min-h-[40rem] text-center flex flex-col justify-center items-center">
-            <p class="mx-auto max-w-80 mb-8">I want to thank you for sharing in my birthday celebration. I look forward to our future together and making many more memories with you.</p>
+            <p class="mx-auto max-w-80 mb-8">I want to thank you for sharing in my birthday celebration. I look forward
+                to our future together and making many more memories with you.</p>
             <p class="mx-auto italic">Best Regards</p>
             <p class="mx-auto text-2xl font-accent">AYA HUMAIRA DESTIANA</p>
         </section>
     </div>
     <!-- lagu start -->
-    
+     <audio src="akon-be-with-you.mp3" id="lagu"></audio>
     <!-- lagu end -->
 </body>
+<script>
+    const tombol = document.getElementById("btnOpen");
+    const konten = document.getElementById("invContent");
+    const musik = document.getElementById("lagu");
 
+    tombol.addEventListener("click", function(){
+        konten.classList.toggle("hidden");
+        musik.play();
+
+        if(tombol.innerText === "Open Invitation"){
+            tombol.innerText = "Close Invitation";
+        }
+
+        else {
+            tombol.innerText = "Open Invitation";
+        }
+    })
+
+    var countdown = new Date("4 25 2025 11:00:00").getTime();
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+
+        var distance = countdown - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("hari").innerText = days;
+        document.getElementById("jam").innerText = hours;
+        document.getElementById("menit").innerText = minutes;
+        document.getElementById("detik").innerText = seconds;
+
+        if (distance < 0){
+            clearInterval(x);
+            document.getElementById("hitungMundur").innerText = "Maaf acara sudah selesai";
+            document.getElementById("hitungMundur").classList.remove("grid");
+            document.getElementById("hitungMundur").classList.add("bg-rose-500", "rounded-lg", "text-white", "p-2");
+        }
+    }, 1000)
+    
+    const zoomableImages = document.querySelectorAll("img");
+    
+    zoomableImages.forEach(img => {
+        img.classList.add("zoomable");
+        img.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            const overlay = document.createElement("div");
+            overlay.classList.add("zoom-overlay");
+
+            const zoomImg = document.createElement("img");
+            zoomImg.src = img.src;
+            zoomImg.alt = img.alt;
+
+            overlay.appendChild(zoomImg);
+            document.body.appendChild(overlay);
+
+            overlay.addEventListener("click", function () {
+                document.body.removeChild(overlay);
+            });
+        });
+    });
+
+    ;
+</script>
 </html>
